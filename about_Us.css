@@ -1,0 +1,351 @@
+:root{
+    --pry: #000;
+    --sec:#fff;
+    --tra: transparent;
+    --highlight: rgb(52, 180, 244);
+    --bgColor: rgba(0, 0, 0, 0.4);
+    --hr: 1px solid rgba(255, 255, 255, 0.2);
+    --chevron: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 6 16 12 8 18"/></svg>') no-repeat center / contain;
+}
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--pry);
+}
+
+.tab_nav{
+    display: none;
+}
+
+.mobile_Nav{
+    display: flex;
+    position: fixed;
+    /* border: 1px solid orange; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 1em;
+    background-color: var(--pry);
+    z-index: 10;
+}
+
+.mobile_Nav.active{
+    background-color: var(--sec);
+    height: 130px;
+}
+
+.mobile_Nav > :first-child{
+    /* display: none; */
+    background-color: var(--tra);
+    /* border: none; */
+}
+
+.comp_Logo{
+    width: 90px;
+    border-radius: 50px;
+    /* background: transparent; */
+}
+
+.comp_Logo.active{
+    display: none;
+}
+
+.hamburger > button{
+    background: var(--sec);
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.hamburger_ctnt{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--sec);
+    left: 0;
+    top: 14.5%;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.hamburger_ctnt.active{
+    transform: translateX(0%);
+}
+
+.hamburger_ctnt > ul{
+    padding: 0em 1.5em;
+    list-style: none;
+    /* text-decoration: none; */
+}
+
+.hamburger_ctnt > ul > li{
+    padding: 0.6em 0em;
+}
+
+.hamburger_ctnt > ul > li > a{
+    font-size: 1.2em;
+}
+
+.highlight{
+    text-decoration: none;
+    color: var(--pry);
+    font-family: sans-serif;
+    /* padding: 1em 0em; */
+    font-weight: bold;
+}
+
+.highlight.activ{
+    color: var(--highlight);
+}
+
+.hamburger_ctnt > ul > :nth-child(3){
+    position: relative;
+}
+
+.chevron::after{
+    content: "";;
+    position: absolute;
+    left: 9em;
+    top: 0.8em;
+    width: 1em;
+    height: 1em;
+    /* chevron as a mask */
+    -webkit-mask: var(--chevron);
+    mask: var(--chevron);
+    background-color: #000; /* arrow color */
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}
+
+.chevron.active::after{
+    transform: rotate(-90deg);
+}
+
+.services_List{
+    padding: 0em 1.5em;
+    list-style: none;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.hamburger_ctnt > ul > :nth-child(3) > ul > li {
+    /* color: pink; */
+    padding: 0.6em 0em;
+}
+
+.hamburger_ctnt > ul > :nth-child(3) > ul > li > a{
+    color: var(--pry);
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.services_List.active{
+    max-height: 500px;
+    overflow: none;
+}
+
+.section1{
+    /* border: 1px solid orange; */
+    margin-top: 7em;
+    color: var(--sec);
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding-bottom: 2em;
+    /* height: 100vh; */
+    border-bottom: var(--hr);
+    /* display: none; */
+}
+
+.section1 > div > :first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 100%;
+    background-image: url("images/Feem/carousel\ \(3\).jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: var(--bgColor);
+    /* gap: -5em; */
+    font-family: sans-serif;
+    /* padding: 2em 1em; */
+    /* line-height: -55em; */
+}
+
+.section1 > div > :last-child {
+    display: flex;
+    margin-top: 1em;
+    padding: 1em;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+.section1 > div > :last-child > :first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    /* border: 1px solid orange; */
+}
+
+.section1 > div > :last-child > :last-child {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    place-items: center;
+    width: 100%;
+    height: auto;
+    gap: 2em;
+    margin-top: 1em;
+}
+
+/* For feature container */
+.feature-container {
+    position: relative;
+    width: 300px; /* Don't forget to always adjust based on design */
+    height: 300px;
+}
+
+.border-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
+    border: 4px solid #00aaff; /*The light blue color*/
+    z-index: 1; /* Sits behind the image */
+}
+
+.feature-image{
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    width: 85%; /*You can always adjust to get the right overlap*/
+    height: 78%;
+    z-index: 2; /*Sitting on top of the border*/
+}
+
+.section1 > div > :last-child > :last-child > :last-child {
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.section2{
+    color: var(--sec);
+    margin-top: 1em;
+    padding: 1em 1em 3em;
+    font-family: sans-serif;
+    border-bottom: var(--hr);
+}
+
+.section2 > div > :first-child{
+    font-weight: bold;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section2 > div > :last-child {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    /* To flip direction */
+    /* direction: rtl; I just used order*/
+    place-items: center;
+    width: 100%;
+    height: auto;
+    gap: 2em;
+    margin-top: 1em;
+}
+
+/* I used order to swap them */
+.section2 > div > :last-child > :first-child {
+    order: 2;
+}
+
+.section2 > div > :last-child > :last-child {
+    text-align: center;
+    order: 1;
+}
+
+footer {
+    color: var(--sec);
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+/* For tab */
+@media (min-width: 600px) {
+    body {
+        overflow-x: hidden;
+    }
+    .mobile_Nav{
+        display: none;
+    }
+
+    .tab_nav {
+    display: flex;
+    position: fixed;
+    /* border: 1px solid orange; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 1em;
+    background-color: var(--pry);
+    z-index: 10;
+    gap: 3em;
+    font-family: sans-serif;
+    }
+
+    .tab_nav > :last-child {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* border: 1px solid orange; */
+        flex-grow: 1;
+    }
+
+    /* For nav links */
+    .highlight{
+        color: var(--sec);
+        text-decoration: none;
+        font-family: sans-serif;
+        /* padding: 1em 0em; */
+        font-weight: bold;
+    }
+
+    .highlight.activ{
+        color: var(--highlight);
+    }
+
+    /* .section1{
+        display: none;
+    } */
+
+}
