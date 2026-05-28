@@ -1,0 +1,293 @@
+:root{
+    --pry: #000;
+    --sec:#fff;
+    --tra: transparent;
+    --highlight: rgb(52, 180, 244);
+    --bgColor: rgba(0, 0, 0, 0.4);
+    --hr: 1px solid rgba(255, 255, 255, 0.2);
+    --chevron: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 6 16 12 8 18"/></svg>') no-repeat center / contain;
+}
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--pry);
+}
+
+.tab_nav{
+    display: none;
+}
+
+.mobile_Nav{
+    display: flex;
+    position: fixed;
+    /* border: 1px solid orange; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 1em;
+    background-color: var(--pry);
+    z-index: 10;
+}
+
+.mobile_Nav.active{
+    background-color: var(--sec);
+    height: 130px;
+}
+
+.mobile_Nav > :first-child{
+    /* display: none; */
+    background-color: var(--tra);
+    /* border: none; */
+}
+
+.comp_Logo{
+    width: 90px;
+    border-radius: 50px;
+    /* background: transparent; */
+}
+
+.comp_Logo.active{
+    display: none;
+}
+
+.hamburger > button{
+    background: var(--sec);
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.hamburger_ctnt{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--sec);
+    left: 0;
+    top: 14.5%;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.hamburger_ctnt.active{
+    transform: translateX(0%);
+}
+
+.hamburger_ctnt > ul{
+    padding: 0em 1.5em;
+    list-style: none;
+    /* text-decoration: none; */
+}
+
+.hamburger_ctnt > ul > li{
+    padding: 0.6em 0em;
+}
+
+.hamburger_ctnt > ul > li > a{
+    font-size: 1.2em;
+}
+
+.highlight{
+    text-decoration: none;
+    color: var(--pry);
+    font-family: sans-serif;
+    /* padding: 1em 0em; */
+    font-weight: bold;
+}
+
+.highlight.activ{
+    color: var(--highlight);
+}
+
+.hamburger_ctnt > ul > :nth-child(3){
+    position: relative;
+}
+
+.chevron::after{
+    content: "";;
+    position: absolute;
+    left: 9em;
+    top: 0.8em;
+    width: 1em;
+    height: 1em;
+    /* chevron as a mask */
+    -webkit-mask: var(--chevron);
+    mask: var(--chevron);
+    background-color: #000; /* arrow color */
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}
+
+.chevron.active::after{
+    transform: rotate(-90deg);
+}
+
+.services_List{
+    padding: 0em 1.5em;
+    list-style: none;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.hamburger_ctnt > ul > :nth-child(3) > ul > li {
+    /* color: pink; */
+    padding: 0.6em 0em;
+}
+
+.hamburger_ctnt > ul > :nth-child(3) > ul > li > a{
+    color: var(--pry);
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.services_List.active{
+    max-height: 500px;
+    overflow: none;
+}
+
+.section1{
+    border-top: var(--hr);
+}
+
+.sec{
+    color: var(--sec);
+    margin-top: 7em;
+    padding: 5em 1em 1em;
+    font-family: sans-serif;
+}
+
+legend{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5em;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-bottom: 1em;
+}
+
+.form-group :is(input, textarea, select, button) {
+    padding: 1em;
+}
+
+.form-dada {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(268.343px, 1fr));
+    /* To flip direction */
+    /* direction: rtl; I just used order*/
+    /* place-items: center; */
+    width: 100%;
+    height: auto;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.submit-btn{
+    color: var(--sec);
+    background-color: var(--highlight);
+}
+
+.section3 > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.section3 > div > :first-child{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.section3 > div > :nth-child(2) > a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.section3 > div > :nth-child(3) > a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.section3 > div > :nth-child(4){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+/* Footer */
+
+footer {
+    color: var(--sec);
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+@media (min-width:600px) {
+    .mobile_Nav{
+        display: none;
+    }
+
+    .tab_nav {
+    display: flex;
+    position: fixed;
+    /* border: 1px solid orange; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 1em;
+    background-color: var(--pry);
+    z-index: 10;
+    gap: 3em;
+    font-family: sans-serif;
+    }
+
+    .tab_nav > :last-child {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* border: 1px solid orange; */
+        flex-grow: 1;
+    }
+
+    /* For nav links */
+    .highlight{
+        color: var(--sec);
+        text-decoration: none;
+        font-family: sans-serif;
+        /* padding: 1em 0em; */
+        font-weight: bold;
+    }
+
+    .highlight.activ{
+        color: var(--highlight);
+    }    
+}

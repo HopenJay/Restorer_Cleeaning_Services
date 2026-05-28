@@ -1,0 +1,21 @@
+{
+    "name": "Restorer Cleaning Services",
+    "short_name": "Restorer",
+    "description": "Professional cleaning services at your doorstep.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#fff",
+    "theme_color": "#34b4f4",
+    "icons": [
+        {
+            "src": "images/Company_Logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "images/Company_Logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

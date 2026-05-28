@@ -6,6 +6,8 @@
     <title>Restorer Cleaning Services</title>
     <link rel="icon" type="image/jpeg" href="images/Feem/company_Logo.jpg">
     <link rel="stylesheet" href="index.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#34b4f4">
 </head>
 <body>
     <!-- For Mobile View -->
@@ -47,7 +49,7 @@
                         </ul>
                     </li>
                     <li><a href="contact.html" class="highlight">Contact</a></li>
-                    <li><a href="blog.html" class="highlight">Blog</a></li>
+                    <li><a href="blog.php" class="highlight">Blog</a></li>
                 </ul>
             </div>
         </div>
@@ -63,7 +65,7 @@
             <a href="about_Us.html" class="highlight">About Us</a>
             <a href="services.html" class="highlight">Services</a>
             <a href="contact.html" class="highlight">Contact</a>
-            <a href="blog.html" class="highlight">Blog</a>
+            <a href="blog.php" class="highlight">Blog</a>
         </div>
       </nav>
 
@@ -462,18 +464,18 @@
                 </div>
 
                 <div>
-                    <a href="office@restoreglobal.co.uk">office@restoreglobal.co.uk</a>
+                    <a href="office@restoreglobal.co.uk" target="_blank">office@restoreglobal.co.uk</a>
                 </div>
 
                 <div>
                     <div>
-                        <a href="https://www.facebook.com/share/17MNxmy6zd/?mibextid=wwXlfr">
+                        <a href="https://www.facebook.com/share/17MNxmy6zd/?mibextid=wwXlfr" target="_blank">
                             <img sizes="25px" srcset="https://static.wixstatic.com/media/11062b_366f7fdbcafc4effaeddb0dba92014c1~mv2.png/v1/fill/w_25,h_25,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_366f7fdbcafc4effaeddb0dba92014c1~mv2.png 1x, https://static.wixstatic.com/media/11062b_366f7fdbcafc4effaeddb0dba92014c1~mv2.png/v1/fill/w_50,h_50,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_366f7fdbcafc4effaeddb0dba92014c1~mv2.png 2x" id="img_0_comp-loyi56u45" src="https://static.wixstatic.com/media/11062b_366f7fdbcafc4effaeddb0dba92014c1~mv2.png/v1/fill/w_25,h_25,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_366f7fdbcafc4effaeddb0dba92014c1~mv2.png" alt="Facebook" class="YaS0jR Tj01hh" width="25" height="25" style="object-fit: cover;">
                         </a>
                     </div>
 
                     <div>
-                        <a href="https://www.instagram.com/restorerclean?igsh=N2Rud2lza3cxZzM1&utm_source=qr">
+                        <a href="https://www.instagram.com/restorerclean?igsh=N2Rud2lza3cxZzM1&utm_source=qr" target="_blank">
                             <img sizes="25px" srcset="https://static.wixstatic.com/media/11062b_6e9638ad803e4099a6116eb750b5a584~mv2.png/v1/fill/w_25,h_25,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_6e9638ad803e4099a6116eb750b5a584~mv2.png 1x, https://static.wixstatic.com/media/11062b_6e9638ad803e4099a6116eb750b5a584~mv2.png/v1/fill/w_50,h_50,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_6e9638ad803e4099a6116eb750b5a584~mv2.png 2x" id="img_1_comp-loyi56u45" src="https://static.wixstatic.com/media/11062b_6e9638ad803e4099a6116eb750b5a584~mv2.png/v1/fill/w_25,h_25,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_6e9638ad803e4099a6116eb750b5a584~mv2.png" alt="Instagram" style="object-fit:cover" class="YaS0jR Tj01hh" width="25" height="25">
                         </a>
                     </div>
@@ -499,7 +501,7 @@
         <section class="section10">
             <div>
                 <!-- Form for service inquiry -->
-                <form action="process_form.php" method="POST" id="contactForm">
+                <form action="admin/contact.php" method="POST" id="contactForm">
                     <!-- Full Name -->
                     <div class="form-group">
                         <label for="full_name">Full Name</label>
@@ -529,16 +531,16 @@
                         <label for="service">Select Service</label>
                         <select name="service" id="service" required>
                             <option value="" disabled selected>Choose an option</option>
-                            <option value="Airbnbs">Airbnbs</option>
+                            <option value="Airbnb">Airbnbs</option>
                             <option value="Appliances">Appliances</option>
                             <option value="Commercial">Commercial</option>
-                            <option value="DeepCleans">Deep Cleans</option>
-                            <option value="EndLease">End Of Tenancy</option>
-                            <option value="HouseKeep">House Keeping</option>
+                            <option value="Deep Cleans">Deep Cleans</option>
+                            <option value="End Of Tenancy">End Of Tenancy</option>
+                            <option value="HouseKeeping">House Keeping</option>
                             <option value="LandLords">Landlords</option>
-                            <option value="Residence">Residential</option>
-                            <option value="SofaCarpets">Sofa & Carpets</option>
-                            <option value="Events">Special Events</option>
+                            <option value="Residential">Residential</option>
+                            <option value="Sofa & Carpets">Sofa & Carpets</option>
+                            <option value="Special Events">Special Events</option>
                         </select>
                     </div>
 
@@ -676,7 +678,7 @@
                 <div>
                     <details>
                         <summary>Why choose us?</summary>
-                        Local expertise. REliable service. Hogh standards. Tailored solutions for homes, businesses, landlords. Flexible hours. Eco-friendly products. Trusted in Leeds.
+                        Local expertise. Reliable service. Hogh standards. Tailored solutions for homes, businesses, landlords. Flexible hours. Eco-friendly products. Trusted in Leeds.
                     </details>
                 </div>
             </div>
@@ -693,6 +695,14 @@
             </div>
         </div>
       </section>
+      
+      <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/sw.js')
+                .then(() => console.log("Service Worker Registered Successfully"))
+                .catch((err) => console.log("Service Worker Failed to Register", err));
+            }
+      </script>
 
       <script src="index.js"></script>
 </body>

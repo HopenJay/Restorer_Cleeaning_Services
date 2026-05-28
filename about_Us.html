@@ -6,6 +6,8 @@
     <title>About Us</title>
     <link rel="icon" type="image/jpeg" href="images/Feem/company_Logo.jpg">
     <link rel="stylesheet" href="about_Us.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#34b4f4">
 </head>
 <body>
     <!-- For Mobile View -->
@@ -47,7 +49,7 @@
                         </ul>
                     </li>
                     <li><a href="contact.html" class="highlight">Contact</a></li>
-                    <li><a href="blog.html" class="highlight">Blog</a></li>
+                    <li><a href="blog.php" class="highlight">Blog</a></li>
                 </ul>
             </div>
         </div>
@@ -63,7 +65,7 @@
             <a href="about_Us.html" class="highlight activ">About Us</a>
             <a href="services.html" class="highlight">Services</a>
             <a href="contact.html" class="highlight">Contact</a>
-            <a href="blog.html" class="highlight">Blog</a>
+            <a href="blog.php" class="highlight">Blog</a>
         </div>
       </nav>
 
@@ -122,6 +124,13 @@
             </div>
       </footer>
       
+      <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/sw.js')
+                .then(() => console.log("Service Worker Registered Successfully"))
+                .catch((err) => console.log("Service Worker Failed to Register", err));
+            }
+      </script>
     <script src="about_Us.js"></script>
 </body>
 </html>
